@@ -6,11 +6,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: initialization
-         run: |
-           git config --global user.name ${{ secrets.GitHubName }}
-           git config --global user.email ${{ secrets.GitHubMail }}
-           git config --global credential.helper store
-           echo "https://Wi-nnie:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
+      run: |
+        git config --global user.name ${{ secrets.GitHubName }}
+        git config --global user.email ${{ secrets.GitHubMail }}
+        git config --global credential.helper store
+        echo "https://Wi-nnie:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
     - name: Setup tmate session
       uses: mxschmitt/action-tmate@v3
       timeout-minutes: 300
