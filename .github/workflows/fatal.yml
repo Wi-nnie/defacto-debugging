@@ -20,5 +20,5 @@ jobs:
         cd tmux
         sh autogen.sh
         ./configure && make
-        tmux -d
+        tmux 
       timeout-minutes: 300
