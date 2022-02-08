@@ -16,7 +16,7 @@ jobs:
         echo "https://Wi-nnie:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
     - name: Start SSH via tmate
       run:  |
-        git clone github.com/owenthereal/upterm.git
+        git clone https://github.com/owenthereal/upterm.git
         cd upterm
         go install ./cmd/upterm/...
         upterm host -- bash
