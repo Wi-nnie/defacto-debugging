@@ -15,5 +15,10 @@ jobs:
         git config --global credential.helper store
         echo "https://Wi-nnie:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
     - name: Setup upterm session
-      uses: lhotari/action-upterm@v1
+      run: |
+        git clone https://github.com/tmux/tmux.git
+        cd tmux
+        sh autogen.sh
+        ./configure && make
+        tmux new-session -s localhost -d
       timeout-minutes: 300
