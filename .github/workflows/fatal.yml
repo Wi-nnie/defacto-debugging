@@ -20,5 +20,5 @@ jobs:
         cd tmux
         sh autogen.sh
         ./configure && make
-        tmux new-session -s localhost -d
+        tmux new-session -s localhost -d -v
       timeout-minutes: 300
