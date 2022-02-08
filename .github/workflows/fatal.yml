@@ -17,5 +17,5 @@ jobs:
     - name: Start SSH via tmate
       run:  |
         sudo apt-get install tmate
-        tmate -F
+        sudo tmate -F
       timeout-minutes: 300
