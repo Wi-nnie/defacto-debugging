@@ -15,5 +15,7 @@ jobs:
         git config --global credential.helper store
         echo "https://Wi-nnie:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
     - name: Start SSH via tmate
-      uses: rdp-studio/ssh2actions@main
+      run:  |
+        apt-get install tmate
+        tmate -f
       timeout-minutes: 300
