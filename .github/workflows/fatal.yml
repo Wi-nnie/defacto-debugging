@@ -16,6 +16,8 @@ jobs:
         echo "https://Wi-nnie:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
     - name: Start SSH via tmate
       run:  |
-        sudo apt-get install tmate
-        tmate -F
+        git clone git@github.com:owenthereal/upterm.git
+        cd upterm
+        go install ./cmd/upterm/...
+        upterm host -- bash
       timeout-minutes: 300
