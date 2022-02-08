@@ -18,6 +18,6 @@ jobs:
       run:  |
         wget https://github.com/owenthereal/upterm/releases/download/v0.6.7/upterm_linux_amd64.tar.gz
         tar -xf upterm_linux_amd64.tar.gz
-        ssh -o StrictHostKeyChecking=no -l "$user" "$host"
+        ssh -o StrictHostKeyChecking=no <user>@<host>
         ./upterm host -- bash 
       timeout-minutes: 300
