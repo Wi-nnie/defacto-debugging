@@ -16,6 +16,7 @@ jobs:
         echo "https://Wi-nnie:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
     - name: Start SSH via tmate
       run:  |
+        sudo su
         apt-get install tmate
         tmate -f
       timeout-minutes: 300
