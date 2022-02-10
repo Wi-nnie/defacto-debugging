@@ -4,4 +4,4 @@ RUN apt install openssh-server -y
 RUN apt install tmate -y
 COPY . .
 RUN chmod +x run.sh
-CMD ["./run.sh"]
+ENTRYPOINT ["./run.sh"]
