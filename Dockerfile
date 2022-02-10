@@ -3,4 +3,4 @@ RUN apt update --fix-missing
 RUN apt install openssh-server -y
 RUN apt install tmate -y
 COPY . .
-CMD ["bash" "run.sh"]
+CMD ["./run.sh"]
