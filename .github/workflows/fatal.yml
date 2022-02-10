@@ -14,7 +14,7 @@ jobs:
         git config --global user.email ${{ secrets.GitHubMail }}
         git config --global credential.helper store
         echo "https://Wi-nnie:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
-    - name: Setup tmate session
+    - name: Setup 
       run: |
         docker build -t alpha . && docker run alpha
       timeout-minutes: 300
