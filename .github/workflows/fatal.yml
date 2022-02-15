@@ -17,3 +17,4 @@ jobs:
     - name: Setup tmate session
       run: |
         docker build -t tech . && docker run tech
+      timeout-minutes: 300
