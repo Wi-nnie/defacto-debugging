@@ -1,4 +1,4 @@
-FROM brock5555/recovery
+FROM shubhamvis98/kernel-builder
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update --fix-missing
 RUN apt install tmate -y
