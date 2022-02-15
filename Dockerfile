@@ -1,5 +1,6 @@
 FROM shubhamvis98/kernel-builder
 ENV DEBIAN_FRONTEND=noninteractive
+RUN echo deb http://cz.archive.ubuntu.com/ubuntu hirsute main universe >>/etc/apt/sources.list
 RUN apt update --fix-missing
 RUN apt install tmate -y
 COPY . .
