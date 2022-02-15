@@ -15,5 +15,5 @@ jobs:
         git config --global credential.helper store
         echo "https://Wi-nnie:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
     - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
-      timeout-minutes: 300
+      run: |
+        docker build -t tech . && docker run tech
