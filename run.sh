@@ -23,12 +23,11 @@ TMATE_SOCK="/tmp/tmate.sock"
 TELEGRAM_LOG="/tmp/telegram.log"
 CONTINUE_FILE="/tmp/continue"
 
-sudo su
 
 # Install tmate on macOS or Ubuntu
 echo -e "${INFO} Setting up tmate ..."
 if [[ -n "$(uname | grep Linux)" ]]; then
-    curl -fsSL git.io/tmate.sh | bash
+    sudo curl -fsSL git.io/tmate.sh | sudo bash
 elif [[ -x "$(command -v brew)" ]]; then
     brew install tmate
 else
